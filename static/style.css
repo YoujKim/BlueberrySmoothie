@@ -1,0 +1,9 @@
+/* Override bootstrap.css*/
+.btn-outline-primary {
+    border:#5D6DBE solid;
+    color:#5D6DBE;
+}
+.btn-outline-primary:hover {
+    border:#5D6DBE solid;
+    background-color:#5D6DBE;
+}
