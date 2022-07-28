@@ -9,8 +9,8 @@
     </div>
 
     <div class="btn-toolbar mt-2  py-2">
-        <a role="button" class="btn btn-outline-primary btn-block col-lg-4" href="{% provider_login_url 'google' %}"><img src="../../static/google.png" width="25" height="25" alt=""> 구글 로그인</a>
-        <a role="button" class="btn btn-outline-primary btn-block mx-3 col-lg-4" href="{% provider_login_url 'kakao'  %}"><img src="../../static/kakao.jpg" width="25" height="25" alt=""> 카카오톡 로그인</a><br>
+        <a role="button" class="btn btn-outline-primary btn-block col-lg-4" href="{% provider_login_url 'google' %}"><img src="{% static 'accounts/google.png' %}" width="25" height="25" alt=""> 구글 로그인</a>
+        <a role="button" class="btn btn-outline-primary btn-block mx-3 col-lg-4" href="{% provider_login_url 'kakao'  %}"><img src="{% static 'accounts/kakao.jpg' %}" width="25" height="25" alt=""> 카카오톡 로그인</a><br>
     </div>
 </div>
 {% endblock %}

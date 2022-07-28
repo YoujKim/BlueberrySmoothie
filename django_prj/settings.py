@@ -14,6 +14,8 @@ import os
 
 from pathlib import Path
 
+'''if you change the settings.py file, you should restart the server'''
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -153,8 +155,8 @@ SITE_ID = 1
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-# 로그인 성공후 이동하는 URL
+# URL move after the login
 LOGIN_REDIRECT_URL = '/'
 
-# 로그아웃시 이동하는 URL
+# URL move after the logout
 LOGOUT_REDIRECT_URL = '/'
