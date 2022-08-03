@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 <style>
-    /* 사이드바 wrapper 스타일 */
-    
     #page-wrapper {
       padding-left: 250px;
     }
@@ -22,7 +20,6 @@
       padding: 20px;
       margin-left: -100px;
     }
-    /* 사이드바 스타일 */
     
     .sidebar-nav {
       width: 250px;
@@ -54,31 +51,31 @@
   
 </style>
   
-  <div id="page-wrapper">
-    <!-- 사이드바 -->
-    <div id="sidebar-wrapper">
-      <ul class="sidebar-nav accordionSidebar">
-        <li><a href="#">탐색</a></li>
-        <li><a href="#">사투리 사전</a></li>
-        <li><a href="#">나의 연습실</a></li>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'accounts:store' %}">보관함</a></li>
-        {% endif %}
-      </ul>
-    </div>
-    <!-- /사이드바 -->
-  
-    <!-- 본문 -->
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="container" style="padding-bottom:100px;">
-            <h2>검색</h2>
-        </div>
-        <div class="container">
-            <h2>인기순위</h2>
-        </div>
+<div id="page-wrapper">
+  <!-- 사이드바 -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav accordionSidebar">
+      <li><a href="#">탐색</a></li>
+      <li><a href="#">사투리 사전</a></li>
+      <li><a href="#">나의 연습실</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'accounts:store' %}">보관함</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  <!-- /사이드바 -->
+
+  <!-- 본문 -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="container" style="padding-bottom:100px;">
+          <h2>검색</h2>
+      </div>
+      <div class="container">
+          <h2>인기순위</h2>
       </div>
     </div>
-    <!-- /본문 -->
   </div>
+  <!-- /본문 -->
+</div>
 {% endblock %}
