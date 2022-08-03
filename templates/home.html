@@ -62,7 +62,7 @@
         <li><a href="#">사투리 사전</a></li>
         <li><a href="#">나의 연습실</a></li>
         {% if user.is_authenticated %}
-        <li><li><a href="#">보관함</a></li></li>
+        <li><a href="{% url 'accounts:store' %}">보관함</a></li>
         {% endif %}
       </ul>
     </div>

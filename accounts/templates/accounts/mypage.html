@@ -3,6 +3,7 @@
 
 {% load socialaccount %}
 {% load static %}
+{% if user.is_authenticated %}
 <style>
     #page-wrapper {
       padding-left: 250px;
@@ -76,4 +77,10 @@
     <!-- /body -->
     
 </div>
+{% else %}
+<script type="text/javascript">
+  alert("로그인 후 이용해주세요");
+  location.href = "/";
+</script>
+{% endif %}
 {% endblock %}
