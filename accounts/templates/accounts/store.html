@@ -1,8 +1,9 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
+
+{% load socialaccount %}
+{% load static %}
 <style>
-    /* 사이드바 wrapper 스타일 */
-    
     #page-wrapper {
       padding-left: 250px;
     }
@@ -22,7 +23,6 @@
       padding: 20px;
       margin-left: -100px;
     }
-    /* 사이드바 스타일 */
     
     .sidebar-nav {
       width: 250px;
@@ -53,32 +53,27 @@
     }
   
 </style>
-  
-  <div id="page-wrapper">
-    <!-- 사이드바 -->
+
+<div id="page-wrapper">
+    <!-- side bar -->
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav accordionSidebar">
-        <li><a href="#">탐색</a></li>
-        <li><a href="#">사투리 사전</a></li>
-        <li><a href="#">나의 연습실</a></li>
-        {% if user.is_authenticated %}
-        <li><li><a href="#">보관함</a></li></li>
-        {% endif %}
+        <li><a href="{% url 'accounts:mypage' %}">정보 수정</a></li>
+        <li><a href="{% url 'accounts:study' %}">최근 학습</a></li>
+        <li><a href="{% url 'accounts:store' %}">보관함</a></li>
       </ul>
     </div>
-    <!-- /사이드바 -->
+    <!-- /side bar -->
   
-    <!-- 본문 -->
+    <!-- body -->
     <div id="page-content-wrapper">
       <div class="container-fluid">
-        <div class="container" style="padding-bottom:100px;">
-            <h2>검색</h2>
-        </div>
-        <div class="container">
-            <h2>인기순위</h2>
+        <div class="container mb-2 pb-2" style="padding-bottom:100px;">
+            <h2>보관함</h2>
         </div>
       </div>
     </div>
-    <!-- /본문 -->
-  </div>
+    <!-- /body -->
+    
+</div>
 {% endblock %}

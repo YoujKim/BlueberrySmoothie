@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+#추후 view 수정 필요
+class InfoList(TemplateView):
+    template_name = 'accounts/mypage.html'
+
+class StudyList(TemplateView):
+    template_name = 'accounts/study.html'
+
+class StoreList(TemplateView):
+    template_name = 'accounts/store.html'
