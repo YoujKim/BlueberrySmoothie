@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load socialaccount %}
+{% load static %}
+{% if user.is_authenticated %}
+<style>
+    #page-wrapper {
+      padding-left: 250px;
+    }
+    
+    #sidebar-wrapper {
+      position: fixed;
+      width: 160px;
+      height: 100%;
+      margin-left: -250px;
+      background: #e5e8f7;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    
+    #page-content-wrapper {
+      width: 100%;
+      padding: 20px;
+      margin-left: -100px;
+    }
+    
+    .sidebar-nav {
+      width: 250px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .sidebar-nav li {
+      text-indent: 1.5em;
+      line-height: 2.8em;
+    }
+    
+    .sidebar-nav li a {
+      display: block;
+      text-decoration: none;
+      color: black;
+    }
+    
+    .sidebar-nav li a:hover {
+      color: gray;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .sidebar-nav > .sidebar-brand {
+      font-size: 1.3em;
+      line-height: 3em;
+    }
+  
+</style>
+
+<div id="page-wrapper">
+    <!-- side bar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav accordionSidebar">
+        <li><a href="{% url 'accounts:mypage' %}">정보 수정</a></li>
+        <li><a href="{% url 'accounts:study' %}">최근 학습</a></li>
+        <li>
+          <a href="#stored-collapse" data-bs-toggle="collapse" aria-expanded="false" aria-controls="stored-collapse">보관함</a>
+          <div class="collapse" id="stored-collapse">
+            <ul class="sidebar-nav accordionSidebar">
+              <li><a href="#" style="text-indent: 2.0em; font-size: 13px;">음성 보관함</a></li>
+              <li><a href="#" style="text-indent: 2.0em; font-size: 13px;">단어 보관함</a></li>
+            </ul>
+          </div>      
+        </li>   
+      </ul>
+    </div>
+    <!-- /side bar -->
+  
+    <!-- body -->
+    {% block my_content %}
+    {% endblock %}
+    <!-- /body -->
+    
+</div>
+{% else %}
+<script type="text/javascript">
+  alert("로그인 후 이용해주세요.");
+  history.back();
+</script>
+{% endif %}
+{% endblock %}

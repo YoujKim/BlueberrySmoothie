@@ -43,11 +43,6 @@
       color: gray;
       background: rgba(255, 255, 255, 0.2);
     }
-    
-    .sidebar-nav > .sidebar-brand {
-      font-size: 1.3em;
-      line-height: 3em;
-    }
   
 </style>
   
@@ -59,7 +54,15 @@
       <li><a href="#">사투리 사전</a></li>
       <li><a href="#">나의 연습실</a></li>
       {% if user.is_authenticated %}
-      <li><a href="{% url 'accounts:store' %}">보관함</a></li>
+      <li>
+        <a href="#stored-collapse" data-bs-toggle="collapse" aria-expanded="false" aria-controls="stored-collapse">보관함</a>
+        <div class="collapse" id="stored-collapse">
+          <ul class="sidebar-nav accordionSidebar">
+            <li><a href="#" style="text-indent: 2.0em; font-size: 13px;">음성 보관함</a></li>
+            <li><a href="#" style="text-indent: 2.0em; font-size: 13px;">단어 보관함</a></li>
+          </ul>
+        </div>      
+      </li>      
       {% endif %}
     </ul>
   </div>
