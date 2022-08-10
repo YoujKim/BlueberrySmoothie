@@ -1,8 +1,14 @@
 {% load socialaccount %}
-<!-- 네비게이션바 -->
-<nav class="navbar navbar-expand-lg navbar-dark border-bottom" style="background-color:#5D6DBE">
+{% load static %}
+<!--navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light px-2 py-3">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}">BlueBerry Smoothie</a>
+
+        <div class="nav-item col-lg-2">
+            <a href="#sidebar-wrapper" data-bs-toggle="collapse" aria-expanded="false" aria-controls="sidebar-wrapper">메뉴 열기</a>
+        </div>
+
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'Logo.png' %}" width="200" height="40" alt=""></a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent"
@@ -12,17 +18,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ml-auto mb-lg-0 my-3 col-lg-3">
                 {% if user.is_authenticated %}
-                <a class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (로그아웃)</a>
+                <a role="button" class="nav-link btn btn-outline-primary btn-block"  href="{% url 'accounts:logout' %}">{{ user.username }} (로그아웃)</a>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'accounts:login' %}">소셜 로그인</a>
+                    <a role="button" class="nav-link btn btn-outline-primary btn-block"  href="{% url 'accounts:login' %}">소셜 로그인</a>
                 </li>
                 {% endif %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'accounts:mypage' %}">마이페이지</a>
-                </li>
             </ul>
         </div>
     </div>
