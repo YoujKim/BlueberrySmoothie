@@ -1,9 +1,63 @@
-/* Override bootstrap.css*/
+/* Override bootstrap.css */
 .btn-outline-primary {
-    border:#5D6DBE solid;
-    color:#5D6DBE;
+    border:#8E67FA solid;
+    color:#8E67FA;
 }
 .btn-outline-primary:hover {
-    border:#5D6DBE solid;
-    background-color:#5D6DBE;
+    border:#8E67FA solid;
+    background-color: #8E67FA;
+}
+
+#page-wrapper {
+    padding-left: 150px;
+}
+  
+#sidebar-wrapper {
+    position: fixed;
+    width: 190px;
+    height: 100%;
+    margin-left: -150px;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: solid #00000029;
+    border-top: solid #00000029;
+}
+  
+#page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+    margin-left: -100px;
+}
+  
+.sidebar-nav {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+.sidebar-nav li {
+    text-indent: 1.5em;
+    line-height: 2.8em;
+}
+  
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+  
+.sidebar-nav li a:hover {
+    color: white;
+    background: #8E67FA;
+}
+
+.side-line {
+    width: 160px; 
+    border-top: solid #707070;
+}
+
+.main-context {
+    padding-left:220px;
 }

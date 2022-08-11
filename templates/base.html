@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="favicon" href="{% static 'favicon.ico' %}">
     <title>블루베리스무디 - 사투리 학습 웹사이트</title>
 </head>
 <body>
@@ -18,10 +19,12 @@
 <!-- side bar -->
 {% include "sidebar.html" %}
 
-<!-- contents Start -->
-{% block content %}
-{% endblock %}
-<!-- contents End -->
+<div class="main-context">
+    <!-- contents Start -->
+    {% block content %}
+    {% endblock %}
+    <!-- contents End -->
+</div>
 
 <!-- Bootstrap JS -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
