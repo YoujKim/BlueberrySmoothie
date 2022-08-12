@@ -11,6 +11,14 @@
 #page-wrapper {
     padding-left: 150px;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: #8E67FA;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
   
 #sidebar-wrapper {
     position: fixed;
@@ -60,4 +68,8 @@
 
 .main-context {
     padding-left:220px;
+}
+
+.show-side a{
+    font-size:5px;
 }
