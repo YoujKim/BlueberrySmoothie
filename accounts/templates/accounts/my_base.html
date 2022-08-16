@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="favicon" href="{% static 'favicon.ico' %}">
+    <title>블루베리스무디 - 사투리 학습 웹사이트</title>
+</head>
+<body>
+
+  {% if user.is_authenticated %}
+
+  <!-- navigation bar -->
+  {% include "navbar.html" %}
+
+  <!-- side bar -->
+  {% include "accounts/my_sidebar.html" %}
+
+  <div class="main-context">
+    <!-- contents Start -->
+    {% block my_content %}
+    {% endblock %}
+    <!-- contents End -->
+  </div>
+  
+  {% else %}
+  <script type="text/javascript">
+    alert("로그인 후 이용해주세요.");
+    history.back();
+  </script>
+  {% endif %}
+
+<!-- Bootstrap JS -->
+<script src="{% static 'bootstrap.min.js' %}"></script>
+</body>
+</html>
+

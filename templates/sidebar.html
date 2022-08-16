@@ -2,19 +2,6 @@
 {% load static %}
 <div id="page-wrapper" style="padding-top: 5px;">
 
-  <div class="collapse show" id="sidebar-wrapper" style="width: 120px;">
-
-    <ul class="sidebar-nav accordionSidebar show-side">
-      
-      <li><a href="#">콘텐츠 검색</a></li>
-      <li><a href="#">사투리 사전</a></li>
-      <li><a href="#">나만의 연습실</a></li>
-      <li><a href="#">보관함</a></li>
-  
-    </ul>
-    
-  </div>
-
   <div class="collapse" id="sidebar-wrapper">
 
     <ul class="sidebar-nav accordionSidebar">
@@ -24,10 +11,8 @@
 
       <li class="side-line my-3 mx-3"></li>
 
-      <li><a href="#">보관함</a></li>
-      <li><a href="#">최근 학습</a></li>
-      <li><a href="#">단어 보관함</a></li>
-      <li><a href="#">음성 보관함</a></li>
+      <li><a href="{% url "accounts:store" %}">보관함</a></li>
+      <li><a href="{% url "accounts:study" %}">최근 학습</a></li>
 
       <li class="side-line my-3 mx-3"></li>
 

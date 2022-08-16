@@ -1,0 +1,16 @@
+<!--sidebar-->
+{% load static %}
+<div id="page-wrapper" style="padding-top: 5px;">
+
+  <div class="collapse" id="sidebar-wrapper">
+
+    <ul class="sidebar-nav accordionSidebar">
+      <li><a href="{% url 'accounts:mypage' %}">정보 수정</a></li>
+      <li><a href="{% url 'accounts:study' %}">최근 학습</a></li>
+      <li><a href="{% url 'accounts:store' %}">보관함</a></li>
+    </ul>
+
+  
+  </div>
+</div>
+

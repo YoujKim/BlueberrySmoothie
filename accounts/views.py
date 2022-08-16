@@ -9,7 +9,4 @@ class StudyList(TemplateView):
     template_name = 'accounts/study.html'
 
 class StoreList(TemplateView):
-    template_name = 'accounts/voice_store.html'
-
-class WstoreList(TemplateView):
-    template_name = 'accounts/word_store.html'
+    template_name = 'accounts/store.html'
