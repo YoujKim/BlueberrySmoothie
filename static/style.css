@@ -67,9 +67,14 @@
 }
 
 .main-context {
-    padding-left:220px;
+    padding-left:190px;
 }
 
 .show-side a{
     font-size:5px;
+}
+
+.list-group :hover{
+    background-color: white;
+    color: black;
 }
