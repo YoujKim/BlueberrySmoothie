@@ -15,11 +15,16 @@ class StoreList(TemplateView):
     template_name = 'accounts/store.html'
 
 def update(request):
-    if request.method == "POST":
-        form = UserUpdateForm(request.POST, instance=request.user.profile) 
-        if form.is_valid():
-            form.save()
-            return redirect('accounts:mypage')
-    else:
-        form = UserUpdateForm(instance=request.user.profile)
-    return render(request, 'accounts/update.html', {'form': form})
+    try:
+        if request.method == "POST":
+            form = UserUpdateForm(request.POST, instance=request.user.profile) 
+            if form.is_valid():
+                form.save()
+                return redirect('accounts:mypage')
+        else:
+            form = UserUpdateForm(instance=request.user.profile)
+        return render(request, 'accounts/update.html', {'form': form})
+    except:
+            profile = Profile(location="", description="", user=request.user)
+            profile.save()
+            return redirect('accounts:update')
