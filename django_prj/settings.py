@@ -35,8 +35,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # project apps
-    'accounts.apps.AccountsConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +51,9 @@ INSTALLED_APPS = [
     # social login providers
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.kakao',
+
+    # project apps
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -95,7 +96,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

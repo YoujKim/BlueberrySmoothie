@@ -1,0 +1,18 @@
+{% extends "accounts/my_base.html" %}
+{% block my_content %}
+<div class="container mx-3">
+
+    <h2>회원 정보 수정</h2>
+
+    <form method='POST' class="my-3">
+        {% csrf_token %}
+        <table>
+            <div class="my-3 col-lg-5"><h5>거주 지역</h5>{{form.location}}</div>
+            <div class="my-3 col-lg-9"><h5>자기소개</h5>{{form.description}}</div>
+        </table>
+        <input type="submit" class="btn btn-outline-primary" value="정보 수정하기">
+    </form>
+
+</div>
+
+{% endblock %}

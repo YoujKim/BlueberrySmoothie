@@ -10,4 +10,5 @@ urlpatterns = [
     path('mypage/', views.InfoList.as_view(), name='mypage'),
     path('mypage/study/', views.StudyList.as_view(), name='study'),
     path('mypage/store/', views.StoreList.as_view(), name='store'),
+    path('mypage/update/', views.update, name='update'),
 ]
