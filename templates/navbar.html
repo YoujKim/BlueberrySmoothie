@@ -1,7 +1,7 @@
 {% load socialaccount %}
 {% load static %}
 <!--navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light px-2 py-3">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light px-2 py-3">
     <div class="container-fluid">
 
         <div class="nav-item col-lg-1">
@@ -27,7 +27,7 @@
                     <a role="button" class="nav-link btn btn-outline-primary btn-block"  href="{% url 'accounts:mypage' %}">마이페이지</a>
                 </li>
                 {% else %}
-                <li class="nav-item">
+                <li class="nav-item mx-3">
                     <a role="button" class="nav-link btn btn-outline-primary btn-block"  href="{% url 'accounts:login' %}">소셜 로그인</a>
                 </li>
                 {% endif %}

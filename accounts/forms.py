@@ -7,11 +7,7 @@ class UserUpdateForm(forms.ModelForm):
         model = Profile
         fields = ['location', 'description']
         widgets = {
-            'location': forms.TextInput(attrs={
-                'class': "form-control",
-                'style': 'max-width: 300px;',
-                'placeholder': "거주 지역"
-            }),
+            'location': forms.Select(),
             'description': forms.Textarea(attrs={
                 'class': "form-control",
                 'placeholder': "자기 소개"

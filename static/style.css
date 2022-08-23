@@ -30,6 +30,7 @@
     overflow-y: auto;
     border-right: solid #00000029;
     border-top: solid #00000029;
+    margin-top:90px;
 }
   
 #page-content-wrapper {
@@ -69,6 +70,7 @@
 .main-context {
     padding-left:240px;
     padding-top:20px;
+    margin-top: 70px;
 }
 
 .show-side a{

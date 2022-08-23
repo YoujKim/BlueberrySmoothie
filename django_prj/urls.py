@@ -22,4 +22,5 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('allauth.urls')),
+    path('voice/', include('voice.urls')),
 ]

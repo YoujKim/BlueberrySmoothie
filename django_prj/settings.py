@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     # project apps
     'accounts.apps.AccountsConfig',
+    'voice.apps.VoiceConfig',
 ]
 
 MIDDLEWARE = [

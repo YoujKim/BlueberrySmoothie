@@ -1,6 +1,4 @@
-from django.db import models
-from django.contrib.auth.models import User
-
+# (DB, template)
 region_choice = (
     ('강원도','강원도'),
     ('경상북도','경상북도'),
@@ -20,11 +18,27 @@ region_choice = (
     ('세종특별자치시','세종특별자치시')
 )
 
-# Create your models here.
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # 자기소개
-    description = models.CharField(max_length=300, blank=True)
-    # 지역
-    location = models.CharField(max_length = 30, choices=region_choice, blank=True)
+situation_choice = (
+    ('연애/결혼','연애/결혼'),
+    ('시사/정치','시사/정치'),
+    ('일상','일상'),
+    ('취미','취미'),
+    ('자기개발','자기개발'),
+    ('여행','여행'),
+)
 
+talker_choice = (
+    ('유아/아동','유아/아동'),
+    ('초등학생','초등학생'),
+    ('중학생','중학생'),
+    ('고등학생','고등학생'),
+    ('20/30대','20/30대'),
+    ('40/50대','40/50대'),
+    ('60대~','60대~'),
+)
+
+gender_choice = (
+    ('남','남'),
+    ('여', '여'),
+    ('혼성','혼성'),
+)
