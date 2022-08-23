@@ -27,7 +27,7 @@ situation_choice = (
     ('여행','여행'),
 )
 
-talker_choice = (
+talker_age_choice = (
     ('유아/아동','유아/아동'),
     ('초등학생','초등학생'),
     ('중학생','중학생'),
@@ -37,7 +37,7 @@ talker_choice = (
     ('60대~','60대~'),
 )
 
-gender_choice = (
+talker_gender_choice = (
     ('남','남'),
     ('여', '여'),
     ('혼성','혼성'),

@@ -20,10 +20,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-lg-0 my-3 col-lg-3">
                 {% if user.is_authenticated %}
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-3 mb-1">
                     <a role="button" class="nav-link btn btn-outline-primary btn-block"  href="{% url 'accounts:logout' %}">로그아웃</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-3">
                     <a role="button" class="nav-link btn btn-outline-primary btn-block"  href="{% url 'accounts:mypage' %}">마이페이지</a>
                 </li>
                 {% else %}

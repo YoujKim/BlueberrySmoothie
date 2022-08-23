@@ -1,7 +1,9 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from voice.models import voice
 
 #TemplateView
-# generic 뷰를 상속받아 사용한다.
-class HomeView(TemplateView):
-    # template 이름은 'home.html'으로 한다.
+class HomeView(ListView):
     template_name = 'home.html'
+    model = voice
+    context_object_name = "voice_list"
+    queryset = voice.objects.order_by("-views")[0:5]

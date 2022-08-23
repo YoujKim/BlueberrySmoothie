@@ -5,5 +5,20 @@
     <h1></h1>
     <h1></h1>
   </div>
+
+  <div class="my-3">
+    <h3> <a href="{% url "voice:voice_list"%}">음성 컨텐츠 (임시)</a> </h3>
+  </div>
+  
+  <div class="my-3">
+  <h3>인기 콘텐츠 Top5 (임시)</h3>
+    <div class="my-3" style="font-size: 20px;">
+        <ol>
+            {% for voice in voice_list %}
+              <a href="/voice/voice_detail/{{voice.id}}"><li>{{voice.title}}</li></a>
+            {% endfor %}
+        </ol>
+    </div>
+  </div>
   <!-- /본문 -->
 {% endblock %}
