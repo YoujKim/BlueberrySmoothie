@@ -8,6 +8,16 @@
     background-color: #8E67FA;
 }
 
+.btn-outline {
+    border:#8E67FA solid;
+    color:black
+}
+.btn-outline:hover {
+    border:#8E67FA solid;
+    background-color: #8E67FA;
+    color:white;
+}
+
 #page-wrapper {
     padding-left: 150px;
 }
