@@ -10,3 +10,9 @@ class voice(models.Model):
     talker_gender = models.CharField(max_length = 30, choices=talker_gender_choice, blank=True)
     views = models.PositiveIntegerField(default=0)
     memo = models.CharField(max_length = 300, blank=True)
+
+    @property
+    def update_views(self):
+        self.views = self.views + 1
+        self.save()
+        return ""

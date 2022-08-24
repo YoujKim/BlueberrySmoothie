@@ -7,7 +7,7 @@
         <ol>
             {% for voice in voice_list %}
                 {% if voice.region == '부산광역시' %}
-                    <a href="/voice/voice_detail/{{voice.id}}"><li>{{voice.title}}</li></a> 
+                    <a href="{% url 'voice:voice_detail' pk=voice.id %}"><li>{{voice.title}}</li></a> 
                 {% endif %}
             {% endfor %}
         </ol>
