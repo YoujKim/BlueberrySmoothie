@@ -11,7 +11,8 @@
 소셜 로그인과 같이 model을 새로 구현한 경우 서버 실행 전에 반드시    
 다음 명령을 입력해주어 DB에 반영해야 합니다.    
 * 8/25일자로 bookmark model이 추가되었으므로 최초 1회 마이그레이션 실행 필수   
-* 또한 model을 추가한 경우 되도록 commit 멘트에 언급해주시고, readme 부분에 작성해주시고 단체방에 언급해주시면 협업하기 수월할 것 같습니다.   
+* 또한 model을 추가하거나 수정한 경우 되도록 commit 멘트에 언급해주시고, readme 파일에 위와같이 작성해주신 다음      
+ 단체방에 한번 더 언급해주시면 협업하기 수월할 것 같습니다.   
 <pre><code> (venv) C:\Users\user\...\22_hg099> python manage.py makemigrations </code></pre>
 <pre><code> (venv) C:\Users\user\...\22_hg099> python manage.py migrate </code></pre>
 
