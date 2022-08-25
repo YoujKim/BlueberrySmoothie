@@ -9,7 +9,9 @@
 
 ##### (1) 마이그레이션    
 소셜 로그인과 같이 model을 새로 구현한 경우 서버 실행 전에 반드시    
-다음 명령을 입력해주어 DB에 반영해야 합니다.
+다음 명령을 입력해주어 DB에 반영해야 합니다.    
+* 8/25일자로 bookmark model이 추가되었으므로 최초 1회 마이그레이션 실행 필수   
+* 또한 model을 추가한 경우 되도록 commit 멘트에 언급해주시고, readme 부분에 작성해주시고 단체방에 언급해주시면 협업하기 수월할 것 같습니다.   
 <pre><code> (venv) C:\Users\user\...\22_hg099> python manage.py makemigrations </code></pre>
 <pre><code> (venv) C:\Users\user\...\22_hg099> python manage.py migrate </code></pre>
 
@@ -34,6 +36,10 @@ style.css 파일을 통해 스타일을 수정한 후 적용할 경우 이전 브라우저에 저장된 캐시
 수정 사항이 적용되지 않는 문제가 있습니다.   
 해결 방법은 F12키를 통헤 개발자 창에 접속한 후 새로고침 버튼을 마우스 오른쪽으로 눌러 캐시 삭제 및 강력한 새로고침을 해주는 것입니다.   
 참고: https://ho-ding.tistory.com/19
+
+##### (3) test DB 생성 관련 문제   
+현재 git에는 테스트 DB (db.sqlite3)를 공유하고 있지 않기 때문에 사용자, 테스트 음성, 북마크 등의 작동을 시험하려면   
+직접 admin 페이지에서 데이터를 생성해야 합니다.      
 
 <hr/>
 (실행 guide)
