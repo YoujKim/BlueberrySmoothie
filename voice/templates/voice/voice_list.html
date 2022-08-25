@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-  <!-- 본문 (나중에 block 모양으로 수정 예정)-->  
+  <!-- 본문 -->
+  <div class="my-3">
+    <h3> 
+      <a class="btn btn-outline-primary" href="{% url "voice:voice_list"%}">지역별</a> 
+      <a class="btn btn-outline-primary" href="{% url "voice:voice_list"%}">상황별</a>
+      <a class="btn btn-outline-primary" href="{% url "voice:voice_list"%}">화자별</a> 
+    </h3>
+  </div>
+
   <div>
     <h2>부산 사투리 콘텐츠</h2>
     <div class="my-3" style="font-size: 20px;">

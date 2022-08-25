@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load on_favs i18n %}
   <!-- 조회수 증가 -->
 {{ voice.update_views }}
 
@@ -7,5 +8,14 @@
   <div>
     조회수: {{voice.views}}
   </div>
+  {% if user.is_authenticated %}
+  {% on_favs voice as on_favs_boolean %}
+    {% if on_favs_boolean %}
+        <a class="btn toggle_bookmark" href="{% url 'voice:toggle-voice' voice.pk %}?action=remove">{% trans "북마크 삭제" %}</a>
+    {% else %}
+        <a class="btn toggle_bookmark" href="{% url 'voice:toggle-voice' voice.pk %}?action=add">{% trans "북마크 추가" %}</a>
+    {% endif %}
+  {% endif %}
+
   <!-- /음성 학습 창 -->
 {% endblock %}

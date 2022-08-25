@@ -6,6 +6,7 @@
 .btn-outline-primary:hover {
     border:#8E67FA solid;
     background-color: #8E67FA;
+    color:white;
 }
 
 .btn-outline {
@@ -90,4 +91,15 @@
 .list-group :hover{
     background-color: white;
     color: black;
+}
+
+.toggle_bookmark {
+    border:#8E67FA solid;
+    color:#8E67FA;
+}
+
+.toggle_bookmark:hover {
+    border:#8E67FA solid;
+    background-color: #8E67FA;
+    color:white;
 }

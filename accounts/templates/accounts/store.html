@@ -2,5 +2,12 @@
 {% block my_content %}
 <div class="container">
   <h2>보관함</h2>
+  <div>
+    <ul style="list-style:none; padding-left:0px; margin-top:16px;">
+      {% for voice in user.bookmark.bookmark.all %}
+        <li><a class="btn btn-outline-primary" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endblock %}

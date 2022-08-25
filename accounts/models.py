@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from voice.models import voice
+from voice import managers
 
 region_choice = (
     ('강원도','강원도'),
@@ -28,3 +30,15 @@ class Profile(models.Model):
     # 지역
     location = models.CharField(max_length = 30, choices=region_choice, blank=True)
 
+class Voicemark(models.Model):
+    user = models.OneToOneField(User, related_name="bookmark", on_delete=models.CASCADE)
+    bookmark = models.ManyToManyField(voice, related_name="bookmark", blank=True)
+    objects = managers.CustomModelManager()
+
+    def __str__(self):
+        return self.user.username+" 북마크"
+
+    def count_bookmarks(self):
+        return self.bookmark.count()
+
+# 추후에 word_bookmark도 추가

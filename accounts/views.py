@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,ListView
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from .forms import UserUpdateForm
-from .models import Profile
+from .models import Profile,Voicemark
+from voice.models import voice
 
 
 class InfoList(TemplateView):
