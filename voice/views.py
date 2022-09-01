@@ -8,6 +8,7 @@ class VoiceListView(ListView):
     model = voice
     # default name = "objcet_list"
     context_object_name = "voice_list"
+    template_name: "voice_map.html"
     # filtering the model
     queryset = voice.objects.order_by("-views")
 
