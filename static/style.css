@@ -112,7 +112,7 @@
     height: 57px;
     color: var(--unnamed-color-8e67fa);
     text-align: left;
-    font: normal normal normal 57px/71px Jalnan;
+    /*font: normal normal normal 57px/71px Jalnan;*/
     letter-spacing: 0px;
     color: #8E67FA;
     text-shadow: inset 0px 5px 6px #00000029;
