@@ -1,6 +1,7 @@
 /* Override bootstrap.css */
 .btn-outline-primary {
     border:#8E67FA solid;
+    border-radius: 34px;
     color:#8E67FA;
 }
 .btn-outline-primary:hover {
@@ -102,4 +103,18 @@
     border:#8E67FA solid;
     background-color: #8E67FA;
     color:white;
+}
+
+.subhead {
+    top: 271px;
+    left: 459px;
+    width: 431px;
+    height: 57px;
+    color: var(--unnamed-color-8e67fa);
+    text-align: left;
+    font: normal normal normal 57px/71px Jalnan;
+    letter-spacing: 0px;
+    color: #8E67FA;
+    text-shadow: inset 0px 5px 6px #00000029;
+    opacity: 1;
 }
