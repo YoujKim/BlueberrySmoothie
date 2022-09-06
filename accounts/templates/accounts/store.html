@@ -3,11 +3,11 @@
 <div class="container">
   <h2>보관함</h2>
   <div>
-    <ul style="list-style:none; padding-left:0px; margin-top:16px;">
+    <ol class="my-3" style="font-size:20px;">
       {% for voice in user.bookmark.bookmark.all %}
-        <li><a class="btn btn-outline-primary" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
+        <li><a style="text-decoration:none; color:black;" class="my-3" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
       {% endfor %}
-    </ul>
+    </ol>
   </div>
 </div>
 {% endblock %}

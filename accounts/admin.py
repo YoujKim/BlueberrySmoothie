@@ -19,7 +19,7 @@ class VoicemarkInline(admin.StackedInline):
 
 # Define a new User admin
 class UserAdmin(BaseUserAdmin):
-    inlines = (ProfileInline, VoicemarkInline)
+    inlines = (ProfileInline, VoicemarkInline, )
 
 # Re-register UserAdmin
 admin.site.unregister(User)

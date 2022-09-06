@@ -12,7 +12,7 @@ class VoiceListView(ListView):
     queryset = voice.objects.order_by("-views")
 
 class VoiceDeatilView(DetailView):
-    model = voice
+    model = voice      
 
 def toggle_voice(request, voice_pk):
     action = request.GET.get("action", None)
@@ -25,4 +25,4 @@ def toggle_voice(request, voice_pk):
             the_list.bookmark.add(voices)
         elif action == "remove":
             the_list.bookmark.remove(voices)
-    return redirect('voice:voice_detail', pk=voice_pk)
+    return redirect('accounts:store')

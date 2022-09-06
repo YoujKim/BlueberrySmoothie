@@ -42,3 +42,5 @@ class Voicemark(models.Model):
         return self.bookmark.count()
 
 # 추후에 word_bookmark도 추가
+
+
