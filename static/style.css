@@ -20,6 +20,13 @@
     color:white;
 }
 
+.search-bar {
+    width: 50em;
+    height: 2.6em;
+    border:#8E67FA solid;
+    color:black
+}
+
 #page-wrapper {
     padding-left: 150px;
 }
@@ -118,3 +125,4 @@
     text-shadow: inset 0px 5px 6px #00000029;
     opacity: 1;
 }
+
