@@ -21,9 +21,10 @@
 }
 
 .search-bar {
-    width: 50em;
+    width: 90%;
     height: 2.6em;
     border:#8E67FA solid;
+    border-radius: 34px;
     color:black
 }
 
