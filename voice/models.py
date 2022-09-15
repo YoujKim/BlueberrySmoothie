@@ -12,6 +12,7 @@ class voice(models.Model):
     views = models.PositiveIntegerField(default=0)
     memo = models.CharField(max_length = 300, blank=True)
     objects = managers.CustomModelManager()
+    audio = models.FileField(upload_to="", blank=True)
 
     def __str__(self):
         return self.title
