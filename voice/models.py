@@ -12,7 +12,8 @@ class voice(models.Model):
     views = models.PositiveIntegerField(default=0)
     memo = models.CharField(max_length = 300, blank=True)
     objects = managers.CustomModelManager()
-    audio = models.FileField(upload_to="", blank=True)
+    # 추후 blank 삭제 필요
+    audio = models.FileField(upload_to="voice", blank=True)
 
     def __str__(self):
         return self.title
@@ -25,7 +26,6 @@ class voice(models.Model):
 
 class script(models.Model):
     voice = models.OneToOneField(voice, on_delete=models.CASCADE)
+    # 추후 blank 삭제 필요
+    text = models.FileField(upload_to="script", blank=True)
     memo = models.CharField(max_length= 300, blank=True)
-
-    def __str__(self):
-        return voice.title+" 대본"
