@@ -21,7 +21,7 @@
 }
 
 .search-bar {
-    width: 90%;
+    width: 80%;
     height: 2.6em;
     border:#8E67FA solid;
     border-radius: 34px;
@@ -119,11 +119,26 @@
     width: 431px;
     height: 57px;
     color: var(--unnamed-color-8e67fa);
-    text-align: left;
+    text-align: center;
     /*font: normal normal normal 57px/71px Jalnan;*/
     letter-spacing: 0px;
     color: #8E67FA;
     text-shadow: inset 0px 5px 6px #00000029;
     opacity: 1;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.left-container {
+    float: left;
+    width: 500px;
+}
+
+.right-container {
+    float: right;
+    width: 500px;
 }
 
