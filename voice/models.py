@@ -1,6 +1,7 @@
 from django.db import models
 from .choice import region_choice, situation_choice, talker_age_choice, talker_gender_choice
 from . import managers
+import os
 # Create your models here.
 
 class voice(models.Model):
@@ -12,8 +13,10 @@ class voice(models.Model):
     views = models.PositiveIntegerField(default=0)
     memo = models.CharField(max_length = 300, blank=True)
     objects = managers.CustomModelManager()
-    # 추후 blank 삭제 필요
-    audio = models.FileField(upload_to="voice", blank=True)
+    audio = models.FileField(upload_to="voice")
+    script = models.FileField(upload_to="script", blank=True)
+    script_title = models.CharField(max_length=100, blank=True)
+    text = models.TextField(default="", blank=True)
 
     def __str__(self):
         return self.title
@@ -24,8 +27,21 @@ class voice(models.Model):
         self.save()
         return ""
 
-class script(models.Model):
-    voice = models.OneToOneField(voice, on_delete=models.CASCADE)
-    # 추후 blank 삭제 필요
-    text = models.FileField(upload_to="script", blank=True)
-    memo = models.CharField(max_length= 300, blank=True)
+    @property
+    def upload_text(self):
+        if self.text == "":
+            file_path = 'media/script/'+self.script_title+'.txt'
+            script = ""
+
+            try:
+                f=open(file_path,'r',encoding="UTF-8")
+                while True:
+                    line = f.readline()
+                    if not line: break
+                    script = script + line
+                self.text = script
+                self.save()
+                f.close()
+            except:
+                print("파일이 존재하지 않습니다")
+        return ""

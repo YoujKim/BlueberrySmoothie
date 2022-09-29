@@ -3,19 +3,19 @@
 {% load on_favs i18n %}
   <!-- 조회수 증가 -->
 {{ voice.update_views }}
-
+{{ voice.upload_text }}
   <!-- 음성 학습 창 -->
   <div>
-    제목: {{voice.title}}
-    음성 재생<br>
+    <div>제목: {{voice.title}}<div>
     <audio controls>
       <source src="/../../../../media/{{voice.audio}}" type="audio/mp4">
     </audio>
     <br>
-    대본
-    
+    <textarea cols="100" rows="16">{{voice.text}}</textarea>
+    <br>
     조회수: {{voice.views}}
   </div>
+
   {% if user.is_authenticated %}
   {% on_favs voice as on_favs_boolean %}
     {% if on_favs_boolean %}
