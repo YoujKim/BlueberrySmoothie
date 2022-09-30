@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.views.generic import ListView, DetailView, View
 from .models import voice
-from accounts.models import Voicemark
+from accounts.models import Voicemark, History
 
 # Create your views here.
 class VoiceListView(ListView):
@@ -27,3 +27,4 @@ def toggle_voice(request, voice_pk):
         elif action == "remove":
             the_list.bookmark.remove(voices)
     return redirect('accounts:store')
+

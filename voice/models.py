@@ -2,6 +2,7 @@ from django.db import models
 from .choice import region_choice, situation_choice, talker_age_choice, talker_gender_choice
 from . import managers
 import os
+from django.contrib.auth.models import User
 # Create your models here.
 
 class voice(models.Model):

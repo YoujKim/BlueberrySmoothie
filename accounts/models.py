@@ -41,6 +41,11 @@ class Voicemark(models.Model):
     def count_bookmarks(self):
         return self.bookmark.count()
 
+class History(models.Model):
+    user = models.OneToOneField(User, related_name="history", on_delete=models.CASCADE)
+    history = models.ManyToManyField(voice, related_name="history", blank=True)
+    objects = managers.CustomModelManager()
+
 # 추후에 word_bookmark도 추가
 
 
