@@ -15,11 +15,15 @@
     </h3>
   </div>
 
-  <div style="margin-top:30px;">
-    <a class="btn search-bar">
-      <div class="mx-2" style="float:right; color:gray;">콘텐츠 검색</div>
-    </a> 
-  </div>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input class="form-control mx-2" type="search" placeholder="콘텐츠 검색" aria-label="Search" name="ticker">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
   
   <div class="my-3 btn col-4">
     
