@@ -4,7 +4,7 @@ import requests
 import json
 
 # Create your views here.
-def home(request):
+def contents(request):
 
     try:
         ticker = request.GET['ticker']
@@ -16,4 +16,4 @@ def home(request):
 
     content = {'search':search}
 
-    return render(request, 'search/home.html', content)
+    return render(request, 'search/contents.html', content)

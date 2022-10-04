@@ -17,7 +17,7 @@
 
   <nav class="navbar bg-light">
     <div class="container-fluid">
-      <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
+      <form class="d-flex" role="search" method="GET" action="{% url 'search:contents' %}">
         {% csrf_token %}
         <input class="form-control mx-2" type="search" placeholder="콘텐츠 검색" aria-label="Search" name="ticker">
         <button class="btn btn-outline-success" type="submit">Search</button>
