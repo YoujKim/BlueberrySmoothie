@@ -1,5 +1,7 @@
 {% load socialaccount %}
 {% load static %}
+{% extends 'base.html' %} <!--다운추가-->
+
 <!--navigation bar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light px-2 py-3">
     <div class="container-fluid">
@@ -7,6 +9,11 @@
         <div class="nav-item col-lg-1">
             <a href="#sidebar-wrapper" data-bs-toggle="collapse" aria-expanded="false" aria-controls="sidebar-wrapper"><img src="{% static 'collapsebar.png' %}" width="30" height="30" alt=""></a>
         </div>
+
+        <!--다운추가-->
+        <i1>
+            <img src = "{% static/searching '185.png' %}">
+        </i1>
 
         <a class="navbar-brand mx-3" href="{% url 'home' %}"><img src="{% static 'Logo.png' %}" width="225" height="40" alt=""></a>
         <button class="navbar-toggler" type="button"
