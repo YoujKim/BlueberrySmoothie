@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <!-- 본문 -->
+  <div>
+    <h3>나만의 연습실</h3>
+  </div>
+
+  <div class="my-3">
+    <img src="http://127.0.0.1:8000/practice/camera">
+  </div>
+  
+  <div>
+    <h4>내 보관함</h4>
+
+    <div>
+        <ol class="my-3" style="font-size:20px;">
+          {% for voice in user.bookmark.bookmark.all %}
+            <li><a style="text-decoration:none; color:black;" class="my-3" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
+          {% endfor %}
+        </ol>
+    </div>
+
+  </div>
+
+  <!-- /본문 -->
+{% endblock %}

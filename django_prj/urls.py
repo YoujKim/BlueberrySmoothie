@@ -26,6 +26,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('voice/', include('voice.urls')),
     path('search/', include('search.urls')),
+    path('practice/', include('practice.urls')),
 ]
 
 if settings.DEBUG:
