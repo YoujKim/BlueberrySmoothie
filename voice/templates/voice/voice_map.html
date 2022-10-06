@@ -10,23 +10,67 @@
   </div>
 
   <div class="container">
-    <div class="left-container">
+    <div class="lconhead">
       <h2 class="subhead">지도로 지역 찾기</h2>
-      <div class="my-3" style="font-size: 20px;">
-          <ol>
-              {% for voice in voice_list %}
-                  {% if voice.region == '부산광역시' %}
-                      <a href="{% url 'voice:voice_detail' pk=voice.id %}"><li>{{voice.title}}</li></a> 
-                  {% endif %}
-              {% endfor %}
-          </ol>
+    </div>
+
+    <div class="rconhead">
+      <h2 class="subhead">지역별 인기 컨텐츠</h2>
+      <p>버튼을 누르면 해당 지역콘텐츠로 이동합니다</p>
+    </div>    
+
+    <div class="item1">
+      <h3>경상도</h3>
+      <div class="my-3" style="font-size: 15px;">
+        <ol>
+            {% for voice in voice_list %}
+                {% if voice.region == '경상북도' or voice.region == '경상남도' %}
+                    <a href="{% url 'voice:voice_detail' pk=voice.id %}"><li>{{voice.title}}</li></a> 
+                {% endif %}
+            {% endfor %}
+        </ol>
       </div>
     </div>
 
-    <div class="right-container">
-      <h2 class="subhead">지역별 인기 컨텐츠</h2>
-      <p>버튼을 누르면 해당 지역콘텐츠로 이동합니다</p>
+    <div class="item2">
+      <h3>전라도</h3>
+      <div class="my-3" style="font-size: 15px;">
+        <ol>
+            {% for voice in voice_list %}
+                {% if voice.region == '전라북도' or voice.region == '전라남도' %}
+                    <a href="{% url 'voice:voice_detail' pk=voice.id %}"><li>{{voice.title}}</li></a> 
+                {% endif %}
+            {% endfor %}
+        </ol>
+      </div>
     </div>
+
+    <div class="item3">
+      <h3>부산</h3>
+      <div class="my-3" style="font-size: 15px;">
+        <ol>
+            {% for voice in voice_list %}
+                {% if voice.region == '부산광역시' %}
+                    <a href="{% url 'voice:voice_detail' pk=voice.id %}"><li>{{voice.title}}</li></a> 
+                {% endif %}
+            {% endfor %}
+        </ol>
+      </div>
+    </div>
+
+    <div class="item4">
+      <h3>강원도</h3>
+      <div class="my-3" style="font-size: 15px;">
+        <ol>
+            {% for voice in voice_list %}
+                {% if voice.region == '강원도' %}
+                    <a href="{% url 'voice:voice_detail' pk=voice.id %}"><li>{{voice.title}}</li></a> 
+                {% endif %}
+            {% endfor %}
+        </ol>
+      </div>
+    </div>
+
   </div>
   <!-- /본문 -->
 {% endblock %}

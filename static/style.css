@@ -128,17 +128,30 @@
 }
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
 }
 
-
-.left-container {
-    float: left;
-    width: 500px;
+.lconhead {
+    grid-area: 1 / 1 / 2 / 2;
 }
 
-.right-container {
-    float: right;
-    width: 500px;
+.rconhead {
+    grid-area: 1 / 2 / 2 / 4;
 }
 
+.item1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.item2 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.item3 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.item4 {
+    grid-area: 3 / 3 / 4 / 4;
+}
