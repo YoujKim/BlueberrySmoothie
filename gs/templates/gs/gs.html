@@ -3,8 +3,12 @@
 {% load static %}
 
   <!-- 본문 -->
-  <div>
-    <h1></h1>
+  <div class="my-3">
+    <h3> 
+      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">지역별</a> 
+      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">상황별</a>
+      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">화자별</a> 
+    </h3>
   </div>
 
           <!--다운추가: 여러 png 이미지 요소들 추가-->
