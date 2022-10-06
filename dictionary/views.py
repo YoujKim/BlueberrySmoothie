@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('사투리 사전 테스트 페이지 입니다.')
+    return render(request, 'dictionary/dictionary.html')
