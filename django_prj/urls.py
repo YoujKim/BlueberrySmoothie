@@ -28,7 +28,8 @@ urlpatterns = [
     path('search/', include('search.urls')),
     path('practice/', include('practice.urls')),
     path('dictionary/', include('dictionary.urls')),
-    path('gs/', include('gs.urls'))
+    path('gs/', include('gs.urls')),
+    path('gyeongsang/', include('gyeongsang.urls'))
     
 ]
 
