@@ -59,8 +59,8 @@ INSTALLED_APPS = [
     'practice.apps.PracticeConfig',
     'dictionary.apps.DictionaryConfig',
     'gyeongsang.apps.GyeongsangConfig',
-    'gs.apps.GsConfig'
-
+    'gs.apps.GsConfig',
+    'dictresult.apps.DictresultConfig'
 ]
 
 MIDDLEWARE = [
