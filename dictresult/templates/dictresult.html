@@ -1,11 +1,51 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 
   <!-- 본문 -->
   <div>
-    <h1></h1>
+    <h1>사투리 사전</h1>
   </div>
+
+  <div class="container-fluid" style="padding-left:0;">
+    <form class="d-flex col-lg-10" role="search" method="GET" action="{% url 'gyeongsang:gyeongsang' %}">
+      {% csrf_token %}
+      <input class="form-control mx-2" type="search" placeholder="단어 검색" aria-label="Search" name="ticker">
+      <button class="btn btn-outline" type="submit">Search</button>
+    </form>
+  </div>
+
+
+      <!--다운추가: 홈화면 여러 png 이미지 요소들 추가-->
+      <div>
+        <i1>
+          <img class = "bar"
+          src = "{% static 'dictionary/bar.png' %}" 
+          alt = "단어 검색 및 조회"
+          title = "단어 검색 및 조회"
+          style =
+            "position: absolute;
+            top: 86px;
+            left: 450px;
+            width: 500px;">
+        </i1>
+
+        <i1>
+          <img class = "example1"
+          src = "{% static 'dictionary/example1.png' %}" 
+          alt = "빼다지 - 사전"
+          title = "빼다지 - 사전"
+          style =
+            "position: absolute;
+            top: 280px;
+            left: 400px;
+            width: 700px;">
+        </i1>
+
+
+        </div>
+
 
 <!-- /본문 -->
 {% endblock %}
