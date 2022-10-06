@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
   <!-- 본문 -->
   <div class="my-3">
     <h3> 
@@ -12,6 +13,18 @@
   <div class="container">
     <div class="lconhead">
       <h2 class="subhead">지도로 지역 찾기</h2>
+    </div>
+
+    <div class="litem">
+      <img
+        src = "{% static 'searching/right_box.png' %}" 
+        alt = ""
+        title = ""
+        style =
+          "top: 310px;
+          left: 700px;
+          height: 300px;"
+          >
     </div>
 
     <div class="rconhead">

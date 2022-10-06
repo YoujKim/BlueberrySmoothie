@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
   <!-- 본문 -->
   <!--다운: 일단 주석처리 해놓았습니당.. --> 
@@ -30,42 +31,8 @@
           left: 600px;
           width: 248px;">
       </i1>
-
-      <i2>
-        <img class = "인기콘텐츠Top5"
-        src = "../static/searching/인기콘텐츠Top5.png" 
-        alt = "인기콘텐츠Top5"
-        title = "인기콘텐츠Top5"
-        style =
-          "position: absolute;
-          top: 269px;
-          left: 375px;
-          height: 35px;">
-      </i2>
-
-      <i3>
-        <img class = "지도로지역찾기"
-        src = "../static/searching/지도로지역찾기.png" 
-        alt = "지도로지역찾기"
-        title = "지도로지역찾기"
-        style =
-          "position: absolute;
-          top: 269px;
-          left: 725px;
-          height: 35px;">
-      </i3>
-
-      <i4>
-        <img class = "right_box"
-        src = "../static/searching/right_box.png" 
-        alt = ""
-        title = ""
-        style =
-          "position: absolute;
-          top: 310px;
-          left: 700px;
-          height: 300px;">
-      </i4>
+ 
+      
       <!-- 주석
       <i5>
         <img class = "left_box"
@@ -150,20 +117,57 @@
     </form>
   </div>
   
-  <div class="my-3 btn col-4">
+  <div class="content">
+    <div class="lcon center">
+      <i2>
+        <img class = "Top5"
+        src = "../static/searching/Top5.png" 
+        alt = "Top5"
+        title = "Top5"
+        style =
+          "margin-top: 10px;
+          top: 269px;
+          left: 375px;
+          height: 35px;">
+      </i2>
 
-    <!--다운: 일단 주석처리 해놓았습니당.. --> 
-   <!-- <h4 class="my-1">인기 콘텐츠 TOP5</h4> -->
-    
-    <div class="my-3 btn col-12" style="border:#8E67FA solid;">
-      <div style="font-size: 20px;">
-        <ul style="list-style:none; padding-left:0px; margin-top:16px;">
-            {% for voice in voice_list %}
-              <li><a class="btn btn-outline col-10 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
-            {% endfor %}
-        </ul>
+      <div class="my-3 btn col-12" style="border:#8E67FA solid;">
+        <div style="font-size: 15px;">
+          <ul style="list-style:none; padding:0px; margin:0px;">
+              {% for voice in voice_list %}
+                <li><a class="btn btn-outline col-10 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
+              {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
+
+    <div class="rcon center">
+      <i3>
+        <img class = "jidoro"
+        src = "../static/searching/jidoro.png" 
+        alt = "jidoro"
+        title = "jidoro"
+        style =
+          "top: 269px;
+          left: 725px;
+          height: 35px;">
+      </i3>
+      
+      <a href="{% url "voice:voice_map" %}">
+        <img class = "right_box"
+        src = "{% static 'searching/right_box.png' %}" 
+        alt = ""
+        title = ""
+        style =
+          "top: 310px;
+          left: 700px;
+          height: 300px;"
+          >
+      </a>
+    </div>
+    
+
   
   </div>
   <!-- /본문 -->
