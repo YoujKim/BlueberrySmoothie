@@ -58,7 +58,11 @@ INSTALLED_APPS = [
     'search',
     'practice.apps.PracticeConfig',
     'dictionary.apps.DictionaryConfig',
+<<<<<<< HEAD
     'gyeongsang.apps.GyeongsangConfig'
+=======
+    'gs.apps.GsConfig'
+>>>>>>> 3ec16a66df7233dbf1a6242b84edb68d939ff670
 ]
 
 MIDDLEWARE = [
