@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
   <!-- 본문 -->
+  <div>
+    <h1>사투리 사전</h1>
+  </div>
+
+  <div class="container-fluid" style="padding-left:0;">
+    <form class="d-flex col-lg-10" role="search" method="GET" action="{% url 'search:contents' %}">
+      {% csrf_token %}
+      <input class="form-control mx-2" type="search" placeholder="단어 검색" aria-label="Search" name="ticker">
+      <button class="btn btn-outline" type="submit">Search</button>
+    </form>
+  </div>
+  
     <!-- /본문 -->
 {% endblock %}
