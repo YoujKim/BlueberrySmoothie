@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'voice.apps.VoiceConfig',
     'search',
     'practice.apps.PracticeConfig',
+    'dictionary.apps.DictionaryConfig'
 ]
 
 MIDDLEWARE = [
