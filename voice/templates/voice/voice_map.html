@@ -10,6 +10,7 @@
     </h3>
   </div>
 
+  <!--
   <div class="container">
     <div class="lconhead">
       <h2 class="subhead">지도로 지역 찾기</h2>
@@ -26,6 +27,60 @@
           height: 300px;"
           >
     </div>
+-->
+        <!--다운추가: 여러 png 이미지 요소들 추가-->
+        <div>
+          <i1>
+            <img class = "search"
+            src = "{% static 'searching_map/search.png' %}" 
+            alt = "지도로 지역 찾기"
+            title = "지도로 지역 찾기"
+            style =
+              "position: absolute;
+              top: 200px;
+              left: 300px;
+              width: 400px;">
+          </i1>
+
+          <i2>
+            <img class = "popular"
+            src = "{% static 'searching_map/popular.png' %}" 
+            alt = "지역별 인기 컨텐츠"
+            title = "지역별 인기 컨텐츠"
+            style =
+              "position: absolute;
+              top: 200px;
+              left: 800px;
+              width: 400px;">
+          </i2>
+
+          <i3>
+            <img class = "content"
+            src = "{% static 'searching_map/content.png' %}" 
+            alt = "지역별 인기 컨텐츠"
+            title = "지역별 인기 컨텐츠"
+            style =
+              "position: absolute;
+              top: 270px;
+              left: 800px;
+              width: 400px;">
+          </i3>
+
+          <i4>
+            <img class = "map"
+            src = "{% static 'searching_map/map.png' %}" 
+            alt = "지도로 지역 찾기"
+            title = "지도로 지역 찾기"
+            style =
+              "position: absolute;
+              top: 270px;
+              left: 300px;
+              width: 400px;">
+          </i4>
+
+ <!--
+        </div>
+
 
     <div class="rconhead">
       <h2 class="subhead">지역별 인기 컨텐츠</h2>
@@ -85,5 +140,6 @@
     </div>
 
   </div>
+  -->
   <!-- /본문 -->
 {% endblock %}
