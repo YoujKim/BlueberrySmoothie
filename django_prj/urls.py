@@ -27,7 +27,9 @@ urlpatterns = [
     path('voice/', include('voice.urls')),
     path('search/', include('search.urls')),
     path('practice/', include('practice.urls')),
-    path('dictionary/', include('dictionary.urls'))
+    path('dictionary/', include('dictionary.urls')),
+    path('gyeongsang/', include('gyeongsang.urls'))
+    
 ]
 
 if settings.DEBUG:
