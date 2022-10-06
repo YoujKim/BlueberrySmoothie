@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 
   <!-- 본문 -->
@@ -15,6 +16,34 @@
     </form>
   </div>
 
+        <!--다운추가: 홈화면 여러 png 이미지 요소들 추가-->
+        <div>
+          <i1>
+            <img class = "bar"
+            src = "{% static 'dictionary/bar.png' %}" 
+            alt = "단어 검색 및 조회"
+            title = "단어 검색 및 조회"
+            style =
+              "position: absolute;
+              top: 86px;
+              left: 450px;
+              width: 500px;">
+          </i1>
+  
+          <i1>
+            <img class = "example2"
+            src = "{% static 'dictionary/example2.png' %}" 
+            alt = "셰그랍다 - 시다"
+            title = "셰그랍다 - 시다"
+            style =
+              "position: absolute;
+              top: 280px;
+              left: 400px;
+              width: 700px;">
+          </i1>
+  
+  
+          </div>
 
 <!-- /본문 -->
 {% endblock %}
