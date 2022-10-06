@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+
   <!-- 본문 -->
-  <div class="my-3" style="text-align:center;">
+  <!--다운: 일단 주석처리 해놓았습니당.. --> 
+  <!--<div class="my-3" style="text-align:center;"> 
     <h1>사투리 학습 서비스</h1>
     <h1>블루베리 스무디</h1>
-  </div>
+  </div>-->
 
   <!--추후 dropdown 수정-->
   <div class="my-3">
@@ -15,19 +17,143 @@
     </h3>
   </div>
 
-  <nav class="navbar bg-light">
-    <div class="container-fluid">
-      <form class="d-flex" role="search" method="GET" action="{% url 'search:contents' %}">
-        {% csrf_token %}
-        <input class="form-control mx-2" type="search" placeholder="콘텐츠 검색" aria-label="Search" name="ticker">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <!--다운추가: 홈화면 여러 png 이미지 요소들 추가-->
+    <div>
+      <i1>
+        <img class = "185"
+        src = "../static/searching/185.png" 
+        alt = "185개 사투리 콘텐츠 보유"
+        title = "185개의 사투리 콘텐츠 보유"
+        style =
+          "position: absolute;
+          top: 50px;
+          left: 600px;
+          width: 248px;">
+      </i1>
+
+      <i2>
+        <img class = "인기콘텐츠Top5"
+        src = "../static/searching/인기콘텐츠Top5.png" 
+        alt = "인기콘텐츠Top5"
+        title = "인기콘텐츠Top5"
+        style =
+          "position: absolute;
+          top: 269px;
+          left: 375px;
+          height: 35px;">
+      </i2>
+
+      <i3>
+        <img class = "지도로지역찾기"
+        src = "../static/searching/지도로지역찾기.png" 
+        alt = "지도로지역찾기"
+        title = "지도로지역찾기"
+        style =
+          "position: absolute;
+          top: 269px;
+          left: 725px;
+          height: 35px;">
+      </i3>
+
+      <i4>
+        <img class = "right_box"
+        src = "../static/searching/right_box.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 310px;
+          left: 700px;
+          height: 300px;">
+      </i4>
+
+      <i5>
+        <img class = "left_box"
+        src = "../static/searching/left_box.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 310px;
+          left: 350px;
+          height: 300px;">
+      </i5>
+
+      <i2_1>
+        <img class = "content1"
+        src = "../static/searching/content1.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 340px;
+          left: 380px;
+          height: 45px;">
+      </i2_1>
+
+      <i2_2>
+        <img class = "content2"
+        src = "../static/searching/content2.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 385px;
+          left: 380px;
+          height: 45px;">
+      </i2_2>
+
+      <i2_3>
+        <img class = "content3"
+        src = "../static/searching/content3.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 430px;
+          left: 380px;
+          height: 45px;">
+      </i2_3>
+
+      <i2_4>
+        <img class = "content4"
+        src = "../static/searching/content4.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 475px;
+          left: 380px;
+          height: 45px;">
+      </i2_4>
+
+      <i2_5>
+        <img class = "content5"
+        src = "../static/searching/content5.png" 
+        alt = ""
+        title = ""
+        style =
+          "position: absolute;
+          top: 520px;
+          left: 380px;
+          height: 45px;">
+      </i2_5>
+
     </div>
-  </nav>
+  
+
+  <div class="container-fluid" style="padding-left:0;">
+    <form class="d-flex col-lg-10" role="search" method="GET" action="{% url 'search:contents' %}">
+      {% csrf_token %}
+      <input class="form-control mx-2" type="search" placeholder="콘텐츠 검색" aria-label="Search" name="ticker">
+      <button class="btn btn-outline" type="submit">Search</button>
+    </form>
+  </div>
   
   <div class="my-3 btn col-4">
-    
-    <h4 class="my-1">인기 콘텐츠 Top5</h4>
+
+    <!--다운: 일단 주석처리 해놓았습니당.. --> 
+   <!-- <h4 class="my-1">인기 콘텐츠 TOP5</h4> -->
     
     <div class="my-3 btn col-12" style="border:#8E67FA solid;">
       <div style="font-size: 20px;">

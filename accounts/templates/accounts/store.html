@@ -2,6 +2,8 @@
 {% block my_content %}
 <div class="container">
   <h2>보관함</h2>
+  <br>
+
   <div>
     <ol class="my-3" style="font-size:20px;">
       {% for voice in user.bookmark.bookmark.all %}
@@ -9,5 +11,6 @@
       {% endfor %}
     </ol>
   </div>
+  
 </div>
 {% endblock %}
