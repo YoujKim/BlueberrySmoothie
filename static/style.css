@@ -151,7 +151,7 @@
     text-shadow: inset 0px 5px 6px #00000029;
     opacity: 1;
 }
-.container {
+.containers {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
