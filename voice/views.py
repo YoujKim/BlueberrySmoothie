@@ -6,7 +6,7 @@ from accounts.models import Voicemark, History
 # Create your views here.
 class VoiceListView(ListView):
     model = voice
-    # default name = "objcet_list"
+    # default name = "object_list"
     context_object_name = "voice_list"
     template_name = "voice/voice_map.html"
     # filtering the model
@@ -28,3 +28,5 @@ def toggle_voice(request, voice_pk):
             the_list.bookmark.remove(voices)
     return redirect('accounts:store')
 
+def index(request):
+    return render(request, 'voice/busan.html')
