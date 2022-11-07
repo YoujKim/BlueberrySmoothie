@@ -29,4 +29,43 @@ def toggle_voice(request, voice_pk):
     return redirect('accounts:store')
 
 def index(request):
-    return render(request, 'voice/busan.html')
+    return render(request, 'voice/gwdo/gangwondo.html')
+
+def index(request):
+    return render(request, 'voice/chchdo/chchbokdo.html') 
+
+def index(request):
+    return render(request, 'voice/chchdo/chchnamdo.html')  
+
+def index(request):
+    return render(request, 'voice/chchdo/daejeon.html') 
+
+def index(request):
+    return render(request, 'voice/chchdo/sejong.html')  
+
+def index(request):
+    return render(request, 'voice/gsdo/busan.html')
+
+def index(request):
+    return render(request, 'voice/gsdo/daegu.html')
+
+def index(request):
+    return render(request, 'voice/gsdo/ulsan.html')
+
+def index(request):
+    return render(request, 'voice/gsdo/gsnamdo.html')
+
+def index(request):
+    return render(request, 'voice/gsdo/gsbokdo.html')
+
+def index(request):
+    return render(request, 'voice/jrado/jrabokdo.html')
+
+def index(request):
+    return render(request, 'voice/jrado/jranamdo.html')
+
+def index(request):
+    return render(request, 'voice/jrado/gwangju.html')
+
+def index(request):
+    return render(request, 'voice/jeju/jejudo.html')
