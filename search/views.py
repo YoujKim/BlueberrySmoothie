@@ -1,21 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
+from voice.models import voice
 
 # Create your views here.
 
+def search(request):
+    voices = voice.objects.all().order_by('-views')
 
-def contents(request):
+    q = request.POST.get('q', "")
 
-    try:
-        ticker = request.GET['ticker']
-        #""안에 voice파일 중 제일 첫번째꺼
-        search = requests.get("http://127.0.0.1:8000/voice/voice_detail/1")
-    except Exception as e:
-        search = ""
+    if q:
+        voices = voice.filter(title__icontains=q)
+        return render(request, 'search.html', {'voice': voice, 'q': q})
 
-    content = {'search':search}
-
-    return render(request, 'search/contents.html', content)
+    else:
+        return render(request, 'search.html')
 
 
