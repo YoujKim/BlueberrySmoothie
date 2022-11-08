@@ -11,8 +11,8 @@ def search(request):
     q = request.POST.get('q', "")
 
     if q:
-        voices = voice.filter(title__icontains=q)
-        return render(request, 'search.html', {'voice': voice, 'q': q})
+        voices = voices.filter(title__icontains=q)
+        return render(request, 'contents.html', {'voice': voice, 'q': q})
 
     else:
         return render(request, 'search.html')

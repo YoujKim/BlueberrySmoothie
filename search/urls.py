@@ -6,6 +6,6 @@ from . import views
 app_name = 'search'
 
 urlpatterns = [
-    path('',views.contents, name='contents'),
+    path('',views.search, name='search'),
 ]
 
