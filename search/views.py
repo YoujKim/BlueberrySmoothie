@@ -7,7 +7,6 @@ from voice.models import voice
 
 def search(request):
     voices = voice.objects.all().order_by('-views')
-
     q = request.POST.get('q', "")
 
     if q:

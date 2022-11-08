@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if not voices %}
+        <h1>검색 결과가 없습니다</h1>
 
-{{ search }}
+    {% else %}
+        {% for voice in voices.all %}
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h1>{{ voice.title }}</h1>
+                    <p>{{ voice.pub_date | date:"Y-m-d" }}</p>
+                    <p>{{ voice.summary }}<a href="{% url 'detail' voice.id %}"> ...자세히 보기</a></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+
+    {% endif %}
 
 {% endblock %}
