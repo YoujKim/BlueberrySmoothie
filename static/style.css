@@ -203,3 +203,10 @@
 .item4 {
     grid-area: 3 / 3 / 4 / 4;
 }
+
+textarea {
+    border:none;
+    font-size:15px;
+    font-family: 'GmarketSansMedium';
+    padding-left:15px;
+}

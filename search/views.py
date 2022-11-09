@@ -7,13 +7,13 @@ from voice.models import voice
 
 def search(request):
     voices = voice.objects.all().order_by('-views')
-    q = request.POST.get('q', "")
+    q = request.GET.get('q', "")
 
     if q:
-        voices = voices.filter(title__icontains=q)
-        return render(request, 'contents.html', {'voice': voice, 'q': q})
+        voice_list = voices.filter(title__icontains=q)
+        return render(request, 'search/contents.html', {'voice': voice_list, 'q': q})
 
     else:
-        return render(request, 'search.html')
+        return render(request, 'search/contents.html')
 
 

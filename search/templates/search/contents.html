@@ -1,19 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if not voices %}
-        <h1>검색 결과가 없습니다</h1>
+
+    <div class="container-fluid my-3" style="padding-left:0;">
+        <form class="d-flex col-lg-9" role="search" method="GET" action="{% url 'search:search' %}">
+        {% csrf_token %}
+        <input class="form-control mx-2" type="search" placeholder="콘텐츠 검색" aria-label="Search" name="q" value="{{q}}">
+        <button class="btn btn-outline" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="mx-2 my-3"><h2 style="font-family: 'GmarketSansMedium';">검색결과</h2></div>
+
+    {% if not voice %}
+        <h1 class="mx-2">검색 결과가 없습니다</h1>
 
     {% else %}
-        {% for voice in voices.all %}
+        {% for voices in voice.all %}
         <div class="container">
-            <div class="card">
-                <div class="card-body">
-                    <h1>{{ voice.title }}</h1>
-                    <p>{{ voice.pub_date | date:"Y-m-d" }}</p>
-                    <p>{{ voice.summary }}<a href="{% url 'detail' voice.id %}"> ...자세히 보기</a></p>
-                </div>
-            </div>
+            <a class="btn btn-outline col-8 my-1" href="{% url 'voice:voice_detail' pk=voices.id %}">{{voices.title}}</a>
         </div>
         <br>
         {% endfor %}

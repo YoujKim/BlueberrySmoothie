@@ -5,13 +5,13 @@
 {{ voice.update_views }}
 {{ voice.upload_text }}
   <!-- 음성 학습 창 -->
-  <div>
-    <div>제목: {{voice.title}}<div>
-    <audio controls>
+  <div class="my-2">
+    <h3 style="font-family: 'GmarketSansMedium';">제목: {{voice.title}}</h3>
+    <audio controls class="my-3">
       <source src="/../../../../media/{{voice.audio}}" type="audio/mp4">
     </audio>
     <br>
-    <textarea cols="100" rows="16">{{voice.text}}</textarea>
+    <textarea class="my-3" readonly cols="100" rows="16">{{voice.text}}</textarea>
     <br>
     조회수: {{voice.views}}
   </div>
