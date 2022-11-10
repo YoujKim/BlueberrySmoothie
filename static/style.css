@@ -7,6 +7,13 @@
     font-weight: normal;
     font-style: normal;
 }
+a {
+    font-family: 'GmarketSansMedium';
+}
+
+div {
+    font-family: 'GmarketSansMedium';
+}
 
 .btn-outline-primary {
     border:#8E67FA solid;
