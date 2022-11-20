@@ -55,12 +55,9 @@ INSTALLED_APPS = [
     # project apps
     'accounts.apps.AccountsConfig',
     'voice.apps.VoiceConfig',
-    'search',
+    'search.apps.SearchConfig',
     'practice.apps.PracticeConfig',
     'dictionary.apps.DictionaryConfig',
-    'gyeongsang.apps.GyeongsangConfig',
-    'gs.apps.GsConfig',
-    'dictresult.apps.DictresultConfig'
 ]
 
 MIDDLEWARE = [
