@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid my-3" style="padding-left:0;">
+        <form class="d-flex col-lg-9" role="search" method="GET" action="{% url 'dictionary:search' %}">
+        {% csrf_token %}
+        <input class="form-control mx-2" type="search" placeholder="단어 검색" aria-label="Search" name="q" value="{{q}}">
+        <button class="btn btn-outline" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="mx-2 my-3"><h2 style="font-family: 'GmarketSansMedium';">검색결과</h2></div>
+
+    {% if not word %}
+        <h1 class="mx-2">검색 결과가 없습니다</h1>
+
+    {% else %}
+        {% for words in word.all %}
+        <div class="container">
+            <h2 style="color:#8E67FA;">{{words.word}}</h2>
+            <h3>'{{words.seoul}}'의 방언</h3>
+            <br>
+            <h3>{{words.mean}}</h3>
+        </div>
+        <br>
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}

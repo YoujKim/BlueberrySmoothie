@@ -17,3 +17,5 @@ def search(request):
         return render(request, 'search/contents.html')
 
 
+
+

@@ -39,6 +39,8 @@ class voice(models.Model):
                 while True:
                     line = f.readline()
                     if not line: break
+                    elif line[0] == "1" or line[0] == "2":
+                        line = "\n"+line
                     script = script + line
                 self.text = script
                 self.save()

@@ -5,11 +5,11 @@
     <h1>사투리 사전</h1>
   </div>
 
-  <div class="container-fluid" style="padding-left:0;">
-    <form class="d-flex col-lg-10" role="search" method="GET" action="{% url 'dictresult:dictresult' %}">
-      {% csrf_token %}
-      <input class="form-control mx-2" type="search" placeholder="단어 검색" aria-label="Search" name="ticker">
-      <button class="btn btn-outline" type="submit">Search</button>
+  <div class="container-fluid my-3" style="padding-left:0;">
+    <form class="d-flex col-lg-9" role="search" method="GET" action="{% url 'dictionary:search' %}">
+    {% csrf_token %}
+    <input class="form-control mx-2" type="search" placeholder="단어 검색" aria-label="Search" name="q" value="{{q}}">
+    <button class="btn btn-outline" type="submit">Search</button>
     </form>
   </div>
 
