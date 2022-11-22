@@ -62,7 +62,7 @@ style.css 파일을 통해 스타일을 수정한 후 적용할 경우 이전 브라우저에 저장된 캐시
 
 먼저 프로젝트를 로컬 디렉토리로 복사하기 위해서 git Bash를 실행하시고   
 원하는 위치에서 다음 코드를 입력하시면 됩니다.   
-<pre><code> git clone https://lab.hanium.or.kr/22_HG099/22_hg099.git  </code></pre>
+<pre><code> git clone https://github.com/YoujKim/BlueberrySmoothie  </code></pre>
 
 저희는 일단 여러개의 브랜치를 사용하기보다는 하나의 main 브랜치를 사용해서 작업하는 것을 생각했는데,
 동시에 개발할 일이 많아지면 각자 브랜치를 나눠서 작업하도록 하겠습니다.   
