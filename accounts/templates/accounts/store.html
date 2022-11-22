@@ -4,12 +4,12 @@
   <h2>보관함</h2>
   <br>
 
-  <div>
-    <ol class="my-3" style="font-size:20px;">
+  <div style="font-size: 15px;">
+    <ul style="list-style:none; padding:0px; margin:0px;">
       {% for voice in user.bookmark.bookmark.all %}
-        <li><a style="text-decoration:none; color:black;" class="my-3" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
+        <li><a class="btn btn-outline col-7 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}} &nbsp;&nbsp;&nbsp;&nbsp;조회수: {{voice.views}}회</a></li>
       {% endfor %}
-    </ol>
+    </ul>
   </div>
   
 </div>

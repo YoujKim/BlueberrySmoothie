@@ -74,7 +74,7 @@
         <div style="font-size: 15px;">
           <ul style="list-style:none; padding:0px; margin:0px;">
               {% for voice in voice_list %}
-                <li><a class="btn btn-outline col-10 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
+                <li><a class="btn btn-outline col-10 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}} &nbsp;&nbsp;&nbsp;&nbsp;조회수: {{voice.views}}회</a></li>
               {% endfor %}
           </ul>
         </div>
