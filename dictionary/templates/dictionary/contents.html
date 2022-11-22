@@ -10,18 +10,21 @@
         </form>
     </div>
 
-    <div class="mx-2 my-3"><h2 style="font-family: 'GmarketSansMedium';">검색결과</h2></div>
+    <div class="mx-2 my-3"><h2 style="font-family: 'GmarketSansMedium';">단어 검색결과</h2></div>
 
     {% if not word %}
         <h1 class="mx-2">검색 결과가 없습니다</h1>
 
     {% else %}
         {% for words in word.all %}
-        <div class="container">
-            <h2 style="color:#8E67FA;">{{words.word}}</h2>
-            <h3>'{{words.seoul}}'의 방언</h3>
+        <div class="mx-2 my-2 px-2 py-2 col-10" style="border:#8E67FA solid;">
+            <h2 style="color:#8E67FA;" class="my-2">{{words.word}}</h2>
+            <h3 class="mx-2">'{{words.seoul}}'의 방언</h3>
             <br>
-            <h3>{{words.mean}}</h3>
+            <h5>사투리 예문</h5>
+            <h4 class="mx-2">{{words.ex_word}}</h4>
+            <h5>표준어 예문</h5>
+            <h4 class="mx-2">{{words.ex_seoul}}</h4>
         </div>
         <br>
         {% endfor %}

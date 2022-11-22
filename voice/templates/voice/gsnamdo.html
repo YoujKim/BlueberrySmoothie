@@ -1,40 +1,12 @@
-{% extends 'base.html' %}
-{% block content %}
-<!--추후 dropdown 수정-->
-<div class="my-3">
-    <h3> 
-      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">지역별</a>
-      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">상황별</a>
-      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">화자별</a> 
-    </h3>
-</div>
+{% extends 'voice/local_base.html' %}}
+{% block local %}
   
 <h1>경상남도</h1>
-<div>
-<map id='right_box' name="image-map">
-    <area alt="gangwondo" title="강원도" href="/voice/voice_map/gangwondo" coords="209,75,202,84,191,88,184,93,189,108,194,111,201,113,207,117,211,123,219,128,216,136,223,139,226,148,227,156,224,162,230,167,242,162,247,164,259,170,273,170,279,170,286,165,271,138,259,119,247,92,237,84,227,73,221,70" shape="poly">
-    <area alt="daejeon" title="대전" href="/voice/voice_map/daejeon" coords="210,198,206,204,206,213,214,209,218,202" shape="poly">
-    <area alt="chchbokdo" title="충청북도" href="/voice/voice_map/chchbokdo" coords="243,162,228,167,223,163,218,169,210,178,212,184,208,189,209,196,215,199,216,207,218,214,221,221,233,218,235,212,230,206,230,196,231,189,239,182,247,181,252,179,256,170" shape="poly">
-    <area alt="chchnamdo" title="충청남도" href="/voice/voice_map/chchnamdo" coords="208,177,202,174,191,176,182,173,175,172,163,177,163,186,173,202,178,216,184,222,196,212,198,219,208,215,216,221,218,211,206,205,210,199,209,188" shape="poly">
-    <area alt="jrabokdo" title="전라북도" href="/voice/voice_map/jrabokdo" coords="195,213,180,221,183,230,165,240,173,247,181,253,187,247,196,247,198,252,212,254,219,253,219,244,220,234,227,227,230,222" shape="poly">
-    <area alt="gwangju" title="광주" href="/voice/voice_map/gwangju" coords="188,260,7" shape="circle">
-    <area alt="jranamdo" title="전라남도" href="/voice/voice_map/jranamdo" coords="172,248,157,264,150,279,154,299,175,309,188,307,224,297,226,270,217,255,195,253,193,264,181,266,180,258,184,253,189,246" shape="poly">
-    <area alt="daegu" title="대구" href="/voice/voice_map/daegu" coords="261,221,251,224,251,229,249,236,254,238,260,235,264,230" shape="poly">
-    <area alt="ulsan" title="울산" href="/voice/voice_map/ulsan" coords="279,235,273,243,285,252,290,243,288,236" shape="poly">
-    <area alt="busan" title="부산" href="/voice/voice_map/busan" coords="282,252,267,260,267,266,275,266,285,261,291,252" shape="poly">
-    <area alt="gsbokdo" title="경상북도" href="/voice/voice_map/gsbokdo" coords="259,172,251,181,236,184,229,197,230,207,234,210,231,220,234,228,242,233,245,238,249,230,258,219,261,224,265,229,258,238,265,240,271,241,277,237,291,235,296,217,290,167,279,170" shape="poly">
-    <area alt="gsnamdo" title="경상남도" href="/voice/voice_map/gsnamdo" coords="229,227,220,242,224,265,228,278,233,284,242,286,258,281,265,267,267,258,279,251,275,243,245,240,256,239" shape="poly">
-    <area alt="jejudo" title="제주도" href="/voice/voice_map/jejudo" coords="184,332,165,343,161,353,181,355,196,348,195,343,196,348" shape="poly">
-</map>
-
-<div class="my-3 btn col-6" style="">
-    <div style="font-size: 15px;">
-      <ul style="list-style:none; padding:0px; margin:0px;">
-          {% for voice in voice_list %}
-            <li><a class="btn btn-outline col-10 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">{{voice.title}}</a></li>
-          {% endfor %}
-      </ul>
-    </div>
-</div>
+<div style="font-size: 15px;">
+  <ul style="list-style:none; padding:0px; margin:0px;">
+      {% for voice in voice_list %}
+      <li><a class="btn btn-outline col-7 my-2" href="{% url 'voice:voice_detail' pk=voice.id %}">제목: {{voice.title}} &nbsp;&nbsp;&nbsp;&nbsp;조회수: {{voice.views}}회</a></li>
+      {% endfor %}
+  </ul>
 </div>
 {% endblock %}

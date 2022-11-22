@@ -4,13 +4,32 @@
 
   <!-- 본문 -->
   <!--추후 dropdown 수정-->
-  
-  <div class="my-3">
-    <h3>
-      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">지역별</a>
-      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">상황별</a>
-      <a class="btn btn-outline-primary" href="{% url "voice:voice_map"%}">화자별</a> 
-    </h3>
+
+  <div class="dropdown my-3">
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      지역별
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/voice/voice_map/gangwondo">강원도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/gsbokdo">경상북도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/gsnamdo">경상남도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/jrabokdo">전라북도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/jranamdo">전라남도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/jejudo">제주도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/chchbokdo">충청북도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/chchnamdo">충청남도</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/gwangju">광주광역시</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/daegu">대구광역시</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/busan">부산광역시</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/ulsan">울산광역시</a></li>
+      <li><a class="dropdown-item" href="/voice/voice_map/daejeon">대전광역시</a></li>
+    </ul>
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      상황별
+    </button>
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      화자별
+    </button>
   </div>
 
     <!--다운추가: 홈화면 여러 png 이미지 요소들 추가-->

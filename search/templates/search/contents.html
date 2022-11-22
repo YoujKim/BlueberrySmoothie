@@ -10,7 +10,7 @@
         </form>
     </div>
 
-    <div class="mx-2 my-3"><h2 style="font-family: 'GmarketSansMedium';">검색결과</h2></div>
+    <div class="mx-2 my-3"><h2 style="font-family: 'GmarketSansMedium';">음성 검색결과</h2></div>
 
     {% if not voice %}
         <h1 class="mx-2">검색 결과가 없습니다</h1>
@@ -18,7 +18,7 @@
     {% else %}
         {% for voices in voice.all %}
         <div class="container">
-            <a class="btn btn-outline col-8 my-1" href="{% url 'voice:voice_detail' pk=voices.id %}">{{voices.title}}</a>
+            <a class="btn btn-outline col-7" href="{% url 'voice:voice_detail' pk=voices.id %}">제목: {{voices.title}} &nbsp;&nbsp;&nbsp;&nbsp;조회수: {{voices.views}}회</a>
         </div>
         <br>
         {% endfor %}
